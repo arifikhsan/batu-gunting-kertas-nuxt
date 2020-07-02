@@ -63,6 +63,8 @@ output: winner, scoreHuman, scoreAI
 resetScore
 clearValue: winner, scoreHuman, scoreAI, pattern, chosenByHuman, chosenByAI
 
+
+
 ## Snippet
 
 ```javascript

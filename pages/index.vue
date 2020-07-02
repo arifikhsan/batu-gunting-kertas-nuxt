@@ -3,6 +3,7 @@
     <div class="flex items-center justify-center flex-col text-center">
       <div class="p-4">
         <h1 class="text-3xl font-bold text-indigo-500">Batu Gunting Kertas</h1>
+        <h2 class="text-base text-indigo-500">Dengan Kecerdasan Buatan</h2>
       </div>
       <div class="p-4 mt-4">
         <h2 class="text-2xl font-semibold text-indigo-500">Skor</h2>
@@ -69,7 +70,7 @@ export default {
       chosenByAI: 0,
       winner: '', // human or AI or draw
       gameCount: 0,
-      patternLength: 10
+      patternLength: 6
     }
   },
   computed: {
@@ -105,7 +106,7 @@ export default {
           this.pattern.push(Math.floor(Math.random() * 3) + 1)
         }
       }
-      console.log(this.pattern)
+      console.table(this.pattern)
     },
     updatePattern() {
       if (this.gameCount !== 0) {
@@ -115,10 +116,10 @@ export default {
     },
     whatShouldAIAnswer() {
       this.prepareData()
-      this.updatePattern()
       const net = new brain.recurrent.LSTMTimeStep()
       net.train([this.pattern], { iterations: 100, log: false })
       const humanWillChose = net.run(this.pattern)
+      this.updatePattern()
 
       const roundedHumanWillChose = Math.round(humanWillChose)
       // console.log(humanWillChose)
@@ -138,6 +139,7 @@ export default {
           this.chosenByAI = 2
           break
       }
+      console.log('AI chose: ' + this.chosenByAI)
     },
     whoIsTheWinner() {
       if (this.chosenByHuman === this.chosenByAI) {
