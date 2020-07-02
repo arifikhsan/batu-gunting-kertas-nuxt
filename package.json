@@ -1,7 +1,7 @@
 {
   "name": "batu-gunting-kertas-nuxt",
   "version": "1.0.0",
-  "description": "My supreme Nuxt.js project",
+  "description": "Permainan Batu Gunting Kertas menggunakan kecerdasan buatan dengan memprediksi nomor yang akan muncul berdasarkan pola.",
   "author": "Arif Ikhsanudin",
   "private": true,
   "scripts": {

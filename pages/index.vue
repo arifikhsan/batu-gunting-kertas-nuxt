@@ -93,10 +93,10 @@ export default {
     }
   },
   methods: {
-    humanInput(rockOrPaperOrScissors) {
+    async humanInput(rockOrPaperOrScissors) {
       this.chosenByHuman = rockOrPaperOrScissors
       this.gameCount++
-      this.whatShouldAIAnswer()
+      await this.whatShouldAIAnswer()
       this.whoIsTheWinner()
     },
     prepareData() {
@@ -113,7 +113,7 @@ export default {
         this.pattern.push(this.chosenByHuman)
       }
     },
-    whatShouldAIAnswer() {
+    async whatShouldAIAnswer() {
       this.prepareData()
       const net = new brain.recurrent.LSTMTimeStep()
       net.train([this.pattern], { iterations: 100, log: false })
