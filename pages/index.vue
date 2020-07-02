@@ -1,10 +1,10 @@
 <template>
   <div class="max-w-5xl mx-auto">
     <div class="flex items-center justify-center flex-col text-center">
-      <div class="p-4 mt-6">
+      <div class="p-4">
         <h1 class="text-3xl font-bold text-indigo-500">Batu Gunting Kertas</h1>
       </div>
-      <div class="p-4 mt-8">
+      <div class="p-4 mt-4">
         <h2 class="text-2xl font-semibold text-indigo-500">Skor</h2>
         <div class="mt-4 flex items-row items-center justify-evenly">
           <div class="w-1/2 border-r border-indigo-500">
@@ -18,26 +18,35 @@
             <p class="mt-4">Pilihan</p>
           </div>
         </div>
-        <div class="my-6 text-2xl font-bold">Kalah</div>
-        <div class="mt-4 flex flex-row items-center justify-center">
-          <button
-            @click="humanMove('rock')"
-            class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
-          >
-            Batu
-          </button>
-          <button
-            @click="humanMove('paper')"
-            class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
-          >
-            Gunting
-          </button>
-          <button
-            @click="humanMove('scissors')"
-            class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
-          >
-            Kertas
-          </button>
+        <div class="my-6 text-2xl font-bold text-red-500">Kalah</div>
+        <div class="mt-4">
+          <div class="flex flex-row items-center justify-center">
+            <button
+              @click="humanMove('rock')"
+              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+            >
+              Batu
+            </button>
+            <button
+              @click="humanMove('paper')"
+              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+            >
+              Gunting
+            </button>
+            <button
+              @click="humanMove('scissors')"
+              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+            >
+              Kertas
+            </button>
+          </div>
+          <div>
+            <button
+              class="py-2 m-2 px-4 text-indigo-500 rounded border"
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
       <div v-show="loading">
@@ -55,7 +64,7 @@ export default {
   data() {
     return {
       pattern: [1, 2, 3, 1, 2, 3, 1, 2],
-      loading: true,
+      loading: true
     }
   },
   methods: {
