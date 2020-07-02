@@ -81,18 +81,6 @@ export default {
     }
   },
   computed: {
-    showWinner() {
-      // return this.winner
-      if (this.winner === 'human') {
-        return 'Anda Menang'
-      } else if (this.winner === 'AI') {
-        return 'Anda Kalah'
-      } else if (this.winner === 'draw') {
-        return 'Seri'
-      } else {
-        return 'Mulai Permainan'
-      }
-    },
     showChosenByHuman() {
       return this.stringOf(this.chosenByHuman)
     },
@@ -113,7 +101,7 @@ export default {
           this.pattern.push(Math.floor(Math.random() * 3) + 1)
         }
       }
-      console.table(this.pattern)
+      // console.table(this.pattern)
     },
     updatePattern() {
       if (this.gameCount !== 0) {
@@ -129,8 +117,7 @@ export default {
       this.updatePattern()
 
       const roundedHumanWillChose = Math.round(humanWillChose)
-      // console.log(humanWillChose)
-      console.log('human will chose: ' + roundedHumanWillChose)
+      // console.log('human will chose: ' + roundedHumanWillChose)
       switch (roundedHumanWillChose) {
         case 1:
           this.chosenByAI = 3
@@ -146,7 +133,7 @@ export default {
           this.chosenByAI = 2
           break
       }
-      console.log('AI chose: ' + this.chosenByAI)
+      // console.log('AI chose: ' + this.chosenByAI)
     },
     whoIsTheWinner() {
       if (this.chosenByHuman === this.chosenByAI) {
