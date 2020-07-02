@@ -44,3 +44,45 @@ console.log(output)
 console.log(rounded)
 
 ```
+
+## Decision
+
+fungsi
+
+whatIsHumanChoice?
+output: chosenByHuman
+
+whatShouldItAnswer?
+input: pattern
+output: chosenByAI
+
+whoIsTheWinner?
+input: chosenByHuman, chosenByAI
+output: winner, scoreHuman, scoreAI
+
+resetScore
+clearValue: winner, scoreHuman, scoreAI, pattern, chosenByHuman, chosenByAI
+
+## Snippet
+
+```javascript
+
+stringOf(integer) {
+      switch (integer) {
+        case 1:
+          return 'batu'
+          break
+        case 2:
+          return 'gunting'
+          break
+        case 3:
+          return 'kertas'
+          break
+
+        default:
+          return ''
+          break
+      }
+    }
+
+```
