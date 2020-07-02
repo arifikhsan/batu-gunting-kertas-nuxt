@@ -1,13 +1,13 @@
 <template>
   <div class="max-w-5xl mx-auto">
-    <div class="flex items-center justify-center flex-col text-center">
+    <div class="flex flex-col items-center justify-center text-center">
       <div class="p-4">
         <h1 class="text-3xl font-bold text-indigo-500">Batu Gunting Kertas</h1>
-        <h2 class="text-base  text-indigo-500">Dengan Kecerdasan Buatan</h2>
+        <h2 class="text-base text-indigo-500">Dengan Kecerdasan Buatan</h2>
       </div>
       <div class="p-4">
         <h2 class="text-2xl font-semibold text-indigo-500">Skor</h2>
-        <div class="mt-4 flex items-row items-center justify-evenly">
+        <div class="flex items-center mt-4 items-row justify-evenly">
           <div class="w-1/2 border-r border-indigo-500">
             <p class="text-3xl text-indigo-500">{{ scoreHuman }}</p>
             <p class="mt-4 text-xl">Manusia</p>
@@ -20,28 +20,32 @@
           </div>
         </div>
         <div class="my-6 text-2xl font-bold">
-          <p class="text-indigo-500" v-if="this.winner === 'human'">Anda menang</p>
-          <p class="text-red-500" v-else-if="this.winner === 'AI'">Anda kalah</p>
-          <p class="text-blue-500" v-else-if="this.winner === 'draw'">Seri</p>
-          <p class="text-gray-700" v-else>Mulai Permainan</p>
+          <p v-if="this.winner === 'human'" class="text-indigo-500">
+            Anda menang
+          </p>
+          <p v-else-if="this.winner === 'AI'" class="text-red-500">
+            Anda kalah
+          </p>
+          <p v-else-if="this.winner === 'draw'" class="text-blue-500">Seri</p>
+          <p v-else class="text-gray-700">Mulai Permainan</p>
         </div>
         <div class="mt-4">
           <div class="flex flex-row items-center justify-center">
             <button
               @click="humanInput(1)"
-              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+              class="px-4 py-2 m-2 text-white duration-500 bg-indigo-500 rounded hover:bg-indigo-600"
             >
               Batu
             </button>
             <button
               @click="humanInput(2)"
-              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+              class="px-4 py-2 m-2 text-white duration-500 bg-indigo-500 rounded hover:bg-indigo-600"
             >
               Gunting
             </button>
             <button
               @click="humanInput(3)"
-              class="py-2 m-2 px-4 text-white bg-indigo-500 rounded hover:bg-indigo-600 duration-500"
+              class="px-4 py-2 m-2 text-white duration-500 bg-indigo-500 rounded hover:bg-indigo-600"
             >
               Kertas
             </button>
@@ -49,7 +53,7 @@
           <div>
             <button
               @click="resetScore"
-              class="py-2 m-2 px-4 text-indigo-500 rounded border"
+              class="px-4 py-2 m-2 text-indigo-500 border rounded"
             >
               Reset
             </button>
