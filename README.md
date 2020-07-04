@@ -1,4 +1,4 @@
-# batu-gunting-kertas-nuxt
+# Batu Gunting Kertas dengan Kecerdasan Buatan
 
 > My supreme Nuxt.js project
 
