@@ -105,7 +105,6 @@ export default {
           this.pattern.push(Math.floor(Math.random() * 3) + 1)
         }
       }
-      // console.table(this.pattern)
     },
     updatePattern() {
       if (this.gameCount !== 0) {
@@ -116,8 +115,9 @@ export default {
     async whatShouldAIAnswer() {
       this.prepareData()
       const net = new brain.recurrent.LSTMTimeStep()
-      net.train([this.pattern], { iterations: 100, log: false })
+      net.train([this.pattern], { iterations: 100, log: true })
       const humanWillChose = net.run(this.pattern)
+      // console.log(humanWillChose)
       this.updatePattern()
 
       const roundedHumanWillChose = Math.round(humanWillChose)
