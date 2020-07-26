@@ -134,7 +134,7 @@ export default {
           break
 
         default:
-          this.chosenByAI = 2
+          this.chosenByAI = 1
           break
       }
       // console.log('AI chose: ' + this.chosenByAI)

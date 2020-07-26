@@ -30,11 +30,11 @@ const net = new brain.recurrent.LSTMTimeStep();
 
 /* net.train([[1, 2, 3]]); */
 
-/* net.train([[1, 1, 1, 1, 1, 1]]); */
-/* const output = net.run([1, 1, 1, 1, 1]); // 1 */
+net.train([[1, 1, 1, 1, 1, 1]]); 
+const output = net.run([1, 1, 1, 1, 1]); // 1
 
-/* net.train([[1, 2, 1, 2, 1, 2]]); */
-/* const output = net.run([1, 2, 1, 2, 1]); // 2 */
+net.train([[1, 2, 1, 2, 1, 2]]);
+const output = net.run([1, 2, 1, 2, 1]); // 2
 
 net.train([[1, 2, 3, 1, 2, 3]]);
 const output = net.run([1, 2, 3, 1, 2]); // 3
