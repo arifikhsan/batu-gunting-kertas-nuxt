@@ -117,11 +117,11 @@ export default {
       const net = new brain.recurrent.LSTMTimeStep()
       net.train([this.pattern], { iterations: 100, log: true })
       const humanWillChose = net.run(this.pattern)
-      // console.log(humanWillChose)
+      console.log(humanWillChose)
       this.updatePattern()
 
       const roundedHumanWillChose = Math.round(humanWillChose)
-      // console.log('human will chose: ' + roundedHumanWillChose)
+      console.log('human will chose: ' + roundedHumanWillChose)
       switch (roundedHumanWillChose) {
         case 1:
           this.chosenByAI = 3
