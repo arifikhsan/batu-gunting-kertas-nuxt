@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "nuxt": "^2.13.2",
     "nuxt-webfontloader": "^1.1.0"
   },

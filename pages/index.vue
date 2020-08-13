@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-5xl mx-auto">
-    <div class="flex flex-col items-center justify-center text-center">
+  <div class="max-w-5xl mx-auto lg:flex lg:justify-evenly lg:items-start">
+    <div class="flex flex-col items-center justify-center text-center lg:mt-10">
       <div class="p-4">
         <h1 class="text-3xl font-bold text-indigo-500">Batu Gunting Kertas</h1>
         <h2 class="text-base text-indigo-500">Dengan Kecerdasan Buatan</h2>
@@ -61,6 +61,69 @@
           <div class="mt-8">
             <p>Game ke: {{ gameCount }}</p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:ml-16">
+      <div class="p-4 mt-4 prose lg:prose-xl">
+        <h2>
+          Apa ini?
+        </h2>
+        <div>
+          <p>
+            Ini adalah permainan batu gunting kertas yang dibuat dengan
+            menggunakan kecerdasan buatan.
+          </p>
+          <p>
+            Game ini dapat membaca pola pemainnya untuk menentukan langkah yang
+            akan diambil oleh AI agar bisa menang.
+          </p>
+          <p>Dibuat dengan framework Nuxt JS & Tailwind CSS.</p>
+        </div>
+      </div>
+
+      <div class="p-4 mt-4 prose lg:prose-xl">
+        <h2>
+          Cara bermain
+        </h2>
+        <div>
+          <ol>
+            <li>
+              Anda bisa memulai permainan dengan memilih "batu", "gunting" atau
+              "kertas".
+            </li>
+            <li>
+              Pilihlah secara terus menerus sampai membuat pola.
+            </li>
+            <li>
+              Contoh pola:
+              <ul>
+                <li>Batu, batu, batu, batu, dst.</li>
+                <li>Batu, gunting, batu, gunting, dst.</li>
+                <li>Batu, gunting, kertas, batu, gunting, kertas, dst.</li>
+                <li>Kertas, kertas, kertas, kertas, dst.</li>
+              </ul>
+            </li>
+            <li>Lihatlah bahwa Anda akan kalah.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="p-4 mt-4 prose lg:prose-xl">
+        <h2>
+          Kode Sumber
+        </h2>
+        <div>
+          <p>
+            Dibuat dengan library:
+            <a href="https://github.com/BrainJS/brain.js">Brain JS</a>
+          </p>
+          <p>
+            Dapatkan kode game ini di:
+            <a href="https://github.com/arifikhsan/batu-gunting-kertas-nuxt"
+              >Github</a
+            >
+          </p>
         </div>
       </div>
     </div>
