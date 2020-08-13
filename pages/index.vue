@@ -177,6 +177,7 @@
 <script>
 export default {
   head: {
+    title: 'Rock Paper Scissors with AI',
     script: [{ src: '//unpkg.com/brain.js' }]
   },
   data() {
