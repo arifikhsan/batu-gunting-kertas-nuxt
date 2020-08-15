@@ -4,6 +4,10 @@
 
 http://rockpaperscissors-ai.now.sh/
 
+## Screensot
+
+![image](https://user-images.githubusercontent.com/32485694/90313106-085fa200-df34-11ea-956c-b22986cc01e1.png)
+
 ## Build Setup
 
 ```bash
