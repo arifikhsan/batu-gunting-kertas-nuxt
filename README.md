@@ -1,6 +1,8 @@
-# Batu Gunting Kertas dengan Kecerdasan Buatan
+# Rock Paper Scissors Game with Artificial Intellegence
 
-> My supreme Nuxt.js project
+> Demo
+
+http://rockpaperscissors-ai.now.sh/
 
 ## Build Setup
 
@@ -20,71 +22,3 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-
-# Brainjs
-
-```javascript
-
-const net = new brain.recurrent.LSTMTimeStep();
-
-/* net.train([[1, 2, 3]]); */
-
-net.train([[1, 1, 1, 1, 1, 1]]); 
-const output = net.run([1, 1, 1, 1, 1]); // 1
-
-net.train([[1, 2, 1, 2, 1, 2]]);
-const output = net.run([1, 2, 1, 2, 1]); // 2
-
-net.train([[1, 2, 3, 1, 2, 3]]);
-const output = net.run([1, 2, 3, 1, 2]); // 3
-
-const rounded = Math.round(output)
-console.log(output)
-console.log(rounded)
-
-```
-
-## Decision
-
-fungsi
-
-whatIsHumanChoice?
-output: chosenByHuman
-
-whatShouldItAnswer?
-input: pattern
-output: chosenByAI
-
-whoIsTheWinner?
-input: chosenByHuman, chosenByAI
-output: winner, scoreHuman, scoreAI
-
-resetScore
-clearValue: winner, scoreHuman, scoreAI, pattern, chosenByHuman, chosenByAI
-
-
-
-## Snippet
-
-```javascript
-
-stringOf(integer) {
-      switch (integer) {
-        case 1:
-          return 'batu'
-          break
-        case 2:
-          return 'gunting'
-          break
-        case 3:
-          return 'kertas'
-          break
-
-        default:
-          return ''
-          break
-      }
-    }
-
-```
