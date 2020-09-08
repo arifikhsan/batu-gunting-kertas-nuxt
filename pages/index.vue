@@ -277,10 +277,10 @@ export default {
           return this.$t('rock')
           break
         case 2:
-          return this.$t('scissors')
+          return this.$t('paper')
           break
         case 3:
-          return this.$t('paper')
+          return this.$t('scissors')
           break
 
         default:
