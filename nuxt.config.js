@@ -52,6 +52,9 @@ export default {
       ]
     }
   },
+  server: {
+    port: 8000,
+  },
   i18n: {
     locales: ['en', 'id'],
     defaultLocale: 'en',
