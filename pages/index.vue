@@ -231,7 +231,6 @@ export default {
       const roundedHumanWillChose = Math.round(humanWillChose)
       console.log('human will chose: ' + roundedHumanWillChose)
       this.chosenByAI = 1 <= roundedHumanWillChose && roundedHumanWillChose <= 3 ? (roundedHumanWillChose % 3) + 1 : 1
-      // console.log('AI chose: ' + this.chosenByAI)
     },
     whoIsTheWinner() {
       if (this.chosenByHuman === this.chosenByAI) {
