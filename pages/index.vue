@@ -230,21 +230,7 @@ export default {
 
       const roundedHumanWillChose = Math.round(humanWillChose)
       console.log('human will chose: ' + roundedHumanWillChose)
-      switch (roundedHumanWillChose) {
-        case 1:
-          this.chosenByAI = 3
-          break
-        case 2:
-          this.chosenByAI = 1
-          break
-        case 3:
-          this.chosenByAI = 2
-          break
-
-        default:
-          this.chosenByAI = 1
-          break
-      }
+      this.chosenByAI = 1 <= roundedHumanWillChose && roundedHumanWillChose <= 3 ? (roundedHumanWillChose % 3) + 1 : 1
       // console.log('AI chose: ' + this.chosenByAI)
     },
     whoIsTheWinner() {
@@ -255,11 +241,11 @@ export default {
         (this.chosenByHuman === 3 && this.chosenByAI === 2) ||
         (this.chosenByHuman === 2 && this.chosenByAI === 1)
       ) {
-        this.winner = 'AI'
-        this.scoreAI++
-      } else {
         this.winner = 'human'
         this.scoreHuman++
+      } else {
+        this.winner = 'AI'
+        this.scoreAI++
       }
     },
     resetScore() {
@@ -275,17 +261,13 @@ export default {
       switch (integer) {
         case 1:
           return this.$t('rock')
-          break
         case 2:
           return this.$t('paper')
-          break
         case 3:
           return this.$t('scissors')
-          break
 
         default:
           return ''
-          break
       }
     }
   }
