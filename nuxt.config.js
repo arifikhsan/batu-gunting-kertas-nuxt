@@ -84,7 +84,7 @@ export default {
           thisIs:
             'This is a paper scissors rock game created using artificial intelligence.',
           thisGame:
-            "This game can read the players' patterns to determine the steps the AI will take in order to win.",
+            "This game can read the players' patterns to determine the next steps for 'AI' will take in order to win.",
           builtWith: 'Built with Nuxt JS & Tailwind CSS framework.',
 
           how: 'How to play',
