@@ -1,4 +1,4 @@
-# Rock Paper Scissors Game with Artificial Intellegence
+# Rock Paper Scissors Game with Artificial Intelligence
 
 > Demo
 
