@@ -14,7 +14,7 @@ Built with Nuxt JS & Tailwind CSS framework.
 
 ## Screensot
 
-![image](https://user-images.githubusercontent.com/32485694/90313106-085fa200-df34-11ea-956c-b22986cc01e1.png)
+![image](https://github.com/AmirhoseinHesami/batu-gunting-kertas-nuxt/assets/86534843/0beef002-8436-49b6-9b4b-29d822aa9112)
 
 ## How to play?
 

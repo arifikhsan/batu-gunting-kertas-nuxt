@@ -64,7 +64,7 @@ export default {
         en: {
           welcome: 'Welcome',
           title: 'Rock Paper Scissors',
-          subtitle: 'With Artificial Intellegence',
+          subtitle: 'With Artificial Intelligence',
 
           gameStart: 'Start Game',
           youWin: 'You Win',
