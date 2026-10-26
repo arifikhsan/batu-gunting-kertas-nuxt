@@ -10,7 +10,7 @@ This is a paper scissors rock game created using artificial intelligence.
 
 This game can read the players' patterns to determine the steps the AI will take in order to win.  
 
-Built with Nuxt JS & Tailwind CSS framework.  
+Built with NExt JS & Tailwind CSS framework.  
 
 ## Screensot
 
