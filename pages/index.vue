@@ -97,6 +97,12 @@
               {{ $t('scissors') }}
             </button>
           </div>
+          <p class="mt-2 text-sm text-gray-600">
+            Keyboard shortcuts:
+            R = {{ $t('rock') }},
+            P = {{ $t('paper') }},
+            S = {{ $t('scissors') }}
+          </p>
           <div>
             <button
               @click="resetScore"
@@ -200,7 +206,31 @@ export default {
       return this.stringOf(this.chosenByAI)
     }
   },
+
+  mounted() {
+    window.addEventListener('keydown', this.handleKeydown)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.handleKeydown)
+  },
+
   methods: {
+    handleKeydown(event) {
+    if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) {
+      return
+    }
+
+    const key = event.key.toLowerCase()
+
+    if (key === 'r') {
+      this.humanInput(1) // Rock
+    } else if (key === 'p') {
+      this.humanInput(2) // Paper
+    } else if (key === 's') {
+      this.humanInput(3) // Scissors
+    }
+  },
     async humanInput(rockOrPaperOrScissors) {
       this.chosenByHuman = rockOrPaperOrScissors
       this.gameCount++
